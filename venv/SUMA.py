@@ -1,5 +1,9 @@
+import sys
 sum=0
-while(n!=0):
-    n=int(input())
-    sum+=n
-    print(sum)
+while(True):
+    try:
+        n = int(input())
+        sum += n
+        print(sum)
+    except EOFError:
+        sys.exit(0)
